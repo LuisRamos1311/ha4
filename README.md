@@ -1,13 +1,13 @@
 # Hausaufgabe Nr. 4
 
-In dieser Hausaufgabe geht es darum das Burger-Chatbot-Programm so umzustrukturieren, dass es u.a. leichter erweitert werden kann. 
+In dieser Hausaufgabe geht es darum, das Burger-Chatbot-Programm so umzustrukturieren, dass es u.a. leichter erweitert werden kann. 
 
 ## Abgabe
 
 Nehmen Sie das Assignment auf Github Classroom an und wählen Sie Ihren Namen aus der Liste aus.
 Dadurch wird ein (dieses) Repository für Sie erstellt. 
 Klonen Sie das Repo und pushen Sie Ihre Lösungen in mehreren sinnvoll zusammengefassten Commits (z.B. einer pro Teilaufgabe, es können aber auch gerne mehr sein).
-Sie müssen Ihre Lösung bis zum 6. Dezember um 23:59 Uhr gepusht haben, alle Tests müssen grün sein (auch auf GitHub), und Sie müssen spätestens in der darauf folgenden von Ihnen belegten Übungsgruppe Ihre Lösung kurz demonstrieren.
+Sie müssen Ihre Lösung bis zum 9. Juni um 23:59 Uhr gepusht haben, alle Tests müssen grün sein (auch auf GitHub), und Sie müssen spätestens in der darauf folgenden von Ihnen belegten Übungsgruppe Ihre Lösung kurz demonstrieren.
 
 ## Aufgabenstellung
 
