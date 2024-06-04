@@ -1,6 +1,7 @@
 package htw.berlin.wi.prog2.domain;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Objects;
 
 abstract class AbstractIngredient implements Ingredient {
@@ -11,7 +12,7 @@ abstract class AbstractIngredient implements Ingredient {
 
     public AbstractIngredient(String name, BigDecimal price, int calories) {
         this.name = name.trim();
-        this.price = price.stripTrailingZeros();
+        this.price = price.setScale(2, RoundingMode.HALF_UP);
         this.calories = calories;
     }
 
