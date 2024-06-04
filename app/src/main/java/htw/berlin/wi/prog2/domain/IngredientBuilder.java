@@ -24,6 +24,15 @@ public class IngredientBuilder {
     }
 
     public Ingredient build(Ingredient.Category cat) {
-        return new Ingredient(name, price, calories); // TODO hier die richtige Unterklasse instanziieren
+        if (cat.equals(Ingredient.Category.BASE)) {
+            return new Base(name, price, calories);
+        } else if (cat.equals(Ingredient.Category.PROTEIN)) {
+            return new Protein(name, price, calories);
+        } else if (cat.equals(Ingredient.Category.TOPPING)) {
+            return new Topping(name, price, calories);
+        } else if (cat.equals(Ingredient.Category.SAUCE)) {
+            return new Sauce(name, price, calories);
+        }
+        return null;
     }
 }
