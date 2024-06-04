@@ -3,6 +3,7 @@ package htw.berlin.wi.prog2.parsing;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import htw.berlin.wi.prog2.service.parsing.SmartInputParser;
 
 import java.util.Map;
 

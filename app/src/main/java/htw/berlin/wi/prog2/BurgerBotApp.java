@@ -3,11 +3,11 @@
  */
 package htw.berlin.wi.prog2;
 
-import htw.berlin.wi.prog2.parsing.CountingInputParser;
 import htw.berlin.wi.prog2.parsing.ExtendableInputParser;
 import htw.berlin.wi.prog2.domain.BurgerBuilder;
 import htw.berlin.wi.prog2.ui.CommandLineUI;
 import htw.berlin.wi.prog2.ui.UserInputWrapper;
+import htw.berlin.wi.prog2.parsing.CountingInputParser;
 
 public class BurgerBotApp {
     public static void main(String[] args) {
