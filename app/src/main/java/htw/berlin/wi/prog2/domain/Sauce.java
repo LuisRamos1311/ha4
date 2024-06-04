@@ -9,4 +9,7 @@ public class Sauce extends AbstractIngredient{
 
     @Override
     public String toString() { return this.getName() + " als Sauce"; }
+
+    @Override
+    public Category getCategory() { return Category.SAUCE; }
 }

@@ -66,4 +66,20 @@ class BurgerBuilderTest {
         assertThrows(IllegalBurgerException.class, builder::build);
         assertThrows(IllegalBurgerException.class, () -> builder.add(base).build());
     }
+
+    //tests
+
+    @Test
+    @DisplayName("a burger cannot have two types of bread")
+    void checkAmountOfBread() {
+        assertThrows(IllegalBurgerException.class, () -> builder.add(base).add(sauce).add(base).build());
+    }
+
+    @Test
+    @DisplayName("a burger must have at least one type of sauce")
+    void checkAmountOfSauce() {
+        final Ingredient protein = ingBuilder.setName("Protein").setPrice("0.90").setCals(90).build(Ingredient.Category.PROTEIN);
+        assertThrows(IllegalBurgerException.class, () -> builder.add(base).add(protein).build());
+    }
+
 }

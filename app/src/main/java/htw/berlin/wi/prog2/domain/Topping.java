@@ -9,4 +9,7 @@ public class Topping extends AbstractIngredient{
 
     @Override
     public String toString() { return this.getName() + " als Topping"; }
+
+    @Override
+    public Category getCategory() { return Category.TOPPING; }
 }

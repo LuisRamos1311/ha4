@@ -9,4 +9,7 @@ public class Base extends AbstractIngredient{
 
     @Override
     public String toString() { return this.getName() + "-Brot"; }
+
+    @Override
+    public Category getCategory() { return Category.BASE; }
 }

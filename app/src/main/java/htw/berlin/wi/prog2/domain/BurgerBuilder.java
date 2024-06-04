@@ -36,10 +36,11 @@ public class BurgerBuilder {
         if(ingredients.size() < 2) throw new IllegalBurgerException("Nicht genügend Zutaten");
 
         // TODO hier mit ingredient.getCategory() statt mit Menu.bases und Menu.sauces arbeiten
-        if(ingredients.stream().filter((ing) -> Menu.bases.containsValue(ing)).collect(Collectors.toList()).size() > 1)
+        //Stream operations: filtering after every ingredient with category BASE, then we turn the result into a list and check if bigger than 1
+        if(ingredients.stream().filter(ingredient -> ingredient.getCategory() == Ingredient.Category.BASE).toList().size() > 1)
             throw new IllegalBurgerException("Zwei mal Brot-Basis in einem Burger geht nicht");
-
-        if(ingredients.stream().filter((ing) -> Menu.sauces.containsValue(ing)).collect(Collectors.toList()).size() < 1)
+        //Stream operations: filtering after every ingredient with category SAUCE, then we turn the result into a list and check if empty
+        if(ingredients.stream().filter(ingredient -> ingredient.getCategory() == Ingredient.Category.SAUCE).toList().isEmpty())
             throw new IllegalBurgerException("Ein Burger braucht mindestens eine Sauce");
     }
 

@@ -17,6 +17,8 @@ public interface Ingredient {
         SAUCE
     }
 
+    Category getCategory();
+
     String toString();
 
     boolean equals(Ingredient ingredient);

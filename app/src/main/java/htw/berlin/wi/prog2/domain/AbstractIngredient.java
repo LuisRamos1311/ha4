@@ -32,6 +32,11 @@ abstract class AbstractIngredient implements Ingredient {
     }
 
     @Override
+    public Category getCategory(){
+        return null;
+    }
+
+    @Override
     public String toString() { return this.getName(); }
 
     //Comparison between two objects (name, price, calories)
