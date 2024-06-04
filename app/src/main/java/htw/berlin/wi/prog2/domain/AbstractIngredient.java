@@ -1,6 +1,7 @@
 package htw.berlin.wi.prog2.domain;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 abstract class AbstractIngredient implements Ingredient {
 
@@ -9,8 +10,8 @@ abstract class AbstractIngredient implements Ingredient {
     public int calories;
 
     public AbstractIngredient(String name, BigDecimal price, int calories) {
-        this.name = name;
-        this.price = price;
+        this.name = name.trim();
+        this.price = price.stripTrailingZeros();
         this.calories = calories;
     }
 
@@ -33,5 +34,18 @@ abstract class AbstractIngredient implements Ingredient {
     @Override
     public String toString() { return this.getName(); }
 
+    //Comparison between two objects (name, price, calories)
+    //because we are calling the ingredient interface, we need to instantiate the AbstractIngredient class
+    //Price comparison: compareTo Method equals 0 means they are the same
+    @Override
+    public boolean equals(Ingredient ingredient) {
+        AbstractIngredient abstractIngredient = (AbstractIngredient) ingredient;
+        return abstractIngredient.price.compareTo(price) == 0 && this.getName().equals(ingredient.getName()) && this.getCalories() == abstractIngredient.getCalories();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price, calories);
+    }
 
 }
